@@ -18,19 +18,36 @@ public class Main {
         ConexaoBanco conexaoBanco = new ConexaoBanco();
         conexaoBanco.getJdbcTemplate();
 
-        captura.nomeRede();
-        String macAddress = captura.macAddress();
-        Integer totalServicos = captura.totalDeServicosAtivos();
-        Integer totalProcessos = captura.totalDeProcessos();
-        Integer totalThreads = captura.totalDeThreads();
-        Double transferenciaEntrada = captura.transferenciaEntradaKbps();
-        Double transferenciaSaida = captura.transferenciaSaidaKbps();
-        LocalDateTime dataHora = captura.dataHora();
+        String macAddress;
+        Integer totalServicos;
+        Integer totalProcessos;
+        Integer totalThreads;
+        Double transferenciaEntrada;
+        Double transferenciaSaida;
+        LocalDateTime dataHora;
 
+        while (true){
 
-        System.out.println(captura.exibirInformacoesDeRede());
+            macAddress = captura.macAddress();
+            totalServicos = captura.totalDeServicosAtivos();
+            totalProcessos = captura.totalDeProcessos();
+            totalThreads = captura.totalDeThreads();
+            transferenciaEntrada = captura.transferenciaEntradaKbps();
+            transferenciaSaida = captura.transferenciaSaidaKbps();
+            dataHora = captura.dataHora();
 
-        conexaoBanco.inserirCapturaJava( macAddress,totalServicos, totalProcessos, totalThreads,transferenciaEntrada,transferenciaSaida, dataHora);
+            System.out.println("Mac Addrees: " + macAddress);
+            System.out.println("Total de Serviços ativos: " + totalServicos);
+            System.out.println("Total de Processos: " + totalProcessos);
+            System.out.println("Total de Threads: " + totalThreads);
+            System.out.println("Bytes Recebidos: " + transferenciaEntrada);
+            System.out.println("Bytes Enviados: " + transferenciaSaida);
+            System.out.println("Data/Hora da captura: " + dataHora);
+
+            conexaoBanco.inserirCapturaJava( macAddress,totalServicos, totalProcessos,
+                    totalThreads,transferenciaEntrada,transferenciaSaida, dataHora);
+
+        }
 
     }
 }

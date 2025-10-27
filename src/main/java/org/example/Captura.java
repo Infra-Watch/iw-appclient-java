@@ -40,7 +40,6 @@ public class Captura {
         List<RedeInterface> interfaces = rede.getGrupoDeInterfaces().getInterfaces();
         RedeInterface infRede = interfaces.get(7);
         String nome = infRede.getNome();
-        System.out.println("Nome da Rede: " + nome);
         return nome;
     }
 
@@ -49,27 +48,23 @@ public class Captura {
         List<RedeInterface> interfaces = rede.getGrupoDeInterfaces().getInterfaces();
         RedeInterface infRede = interfaces.get(7);
         String macAddress = infRede.getEnderecoMac();
-        System.out.println("Mac Addrees: " + macAddress);
         return macAddress;
     }
     public Integer totalDeServicosAtivos(){
 
         Integer servicos = getGrupoDeServicos().getTotalServicosAtivos();
-        System.out.println("Total de Serviços ativos: " + servicos);
         return servicos;
     }
 
     public Integer totalDeProcessos(){
 
         Integer processos = getGrupoDeProcessos().getTotalProcessos();
-        System.out.println("Total de Processos: " + processos);
         return processos;
     }
 
     public Integer totalDeThreads(){
 
         Integer threads = getGrupoDeProcessos().getTotalThreads();
-        System.out.println("Total de Threads: " + threads);
         return threads;
     }
 
@@ -77,7 +72,6 @@ public class Captura {
         List<RedeInterface> interfaces = rede.getGrupoDeInterfaces().getInterfaces();
         RedeInterface infRede = interfaces.get(7);
         Long bytesEnviados = infRede.getBytesEnviados();
-        System.out.println("Bytes Enviados: " + bytesEnviados);
         return bytesEnviados * 8/1000.;
     }
 
@@ -85,13 +79,11 @@ public class Captura {
         List<RedeInterface> interfaces = rede.getGrupoDeInterfaces().getInterfaces();
         RedeInterface infRede = interfaces.get(7);
         Long bytesRecebidos = infRede.getBytesRecebidos();
-        System.out.println("Bytes Recebidos: " + bytesRecebidos);
         return bytesRecebidos * 8/1000.;
     }
 
     public LocalDateTime dataHora(){
         LocalDateTime dataHora = LocalDateTime.now();
-        System.out.println("Data/Hora da captura: " + dataHora);
         return dataHora;
     }
 
