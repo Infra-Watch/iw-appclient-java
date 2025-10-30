@@ -45,8 +45,8 @@ public class Captura {
 
 
     public String macAddress(){
-        List<RedeInterface> interfaces = rede.getGrupoDeInterfaces().getInterfaces();
-        RedeInterface infRede = interfaces.get(7);
+        List<RedeInterface> interfaces = exibirInformacoesDeRede();
+        RedeInterface infRede = interfaces.getLast();
         String macAddress = infRede.getEnderecoMac();
         return macAddress;
     }

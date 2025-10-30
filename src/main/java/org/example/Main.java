@@ -47,7 +47,7 @@ public class Main {
             conexaoBanco.inserirCapturaJava( macAddress,totalServicos, totalProcessos,
                     totalThreads,transferenciaEntrada,transferenciaSaida, dataHora);
 
-        }
 
+        }
     }
 }
