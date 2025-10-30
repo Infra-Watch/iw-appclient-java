@@ -12,9 +12,9 @@ public class ConexaoBanco {
 
     public ConexaoBanco() {
         BasicDataSource basicDataSource = new BasicDataSource();
-        basicDataSource.setUrl("jdbc:mysql://localhost:3306/INFRAWATCH?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC");
-        basicDataSource.setUsername("aluno");
-        basicDataSource.setPassword("Sptech@123");
+        basicDataSource.setUrl("jdbc:mysql://3.85.148.68:3306/infrawatch?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC");
+        basicDataSource.setUsername("captura_java");
+        basicDataSource.setPassword("jarInfrawatch1234");
         basicDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
         this.basicDataSource = basicDataSource;
@@ -34,7 +34,7 @@ public class ConexaoBanco {
                                    Double transferenciaSaida, LocalDateTime dataHora){
         jdbcTemplate.update("CALL inserir_captura_java(?,?,?,?,?,?,?)", macAddress, totalDeServicosAtivos,
                 totalDeProcessos, totalDeThreads, transferenciaEntrada, transferenciaSaida, dataHora);
-        System.out.println("\nDados inseridos no banco!");
+        System.out.println("\nDados inseridos no banco!\n");
 
     }
 }
