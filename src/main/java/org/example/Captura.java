@@ -48,7 +48,7 @@ public class Captura {
         List<RedeInterface> interfaces = exibirInformacoesDeRede();
         RedeInterface infRede = interfaces.getLast();
         String macAddress = infRede.getEnderecoMac();
-        return macAddress;
+        return macAddress.replaceAll(":", "");
     }
     public Integer totalDeServicosAtivos(){
 

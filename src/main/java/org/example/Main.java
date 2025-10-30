@@ -36,7 +36,7 @@ public class Main {
             transferenciaSaida = captura.transferenciaSaidaKbps();
             dataHora = captura.dataHora();
 
-            System.out.println("Mac Addrees: " + macAddress);
+            System.out.println("Mac Address: " + macAddress);
             System.out.println("Total de Serviços ativos: " + totalServicos);
             System.out.println("Total de Processos: " + totalProcessos);
             System.out.println("Total de Threads: " + totalThreads);
