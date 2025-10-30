@@ -30,6 +30,10 @@ Este repositório contém a aplicação client java do projeto **InfraWatch**.
    ```bash
    cd iw-appclient-java
    ```
+3. **Rodar o Script executável**
+   ```bash
+   java -jar iw-appclient-java-1.0-SNAPSHOT.jar
+   ```
 
 ---
 
