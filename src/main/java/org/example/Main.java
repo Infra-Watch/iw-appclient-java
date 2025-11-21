@@ -4,13 +4,15 @@ import com.github.britooo.looca.api.core.Looca;
 import com.github.britooo.looca.api.group.processos.ProcessoGrupo;
 import com.github.britooo.looca.api.group.rede.Rede;
 import com.github.britooo.looca.api.group.servicos.ServicoGrupo;
+import org.h2.util.json.JSONObject;
 import oshi.SystemInfo;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         Looca looca = new Looca();
 
@@ -26,6 +28,7 @@ public class Main {
         Double transferenciaSaida;
         LocalDateTime dataHora;
 
+//        RODANDO CAPTURA
         while (true){
 
             macAddress = captura.macAddress();
@@ -46,8 +49,9 @@ public class Main {
 
             conexaoBanco.inserirCapturaJava( macAddress,totalServicos, totalProcessos,
                     totalThreads,transferenciaEntrada,transferenciaSaida, dataHora);
-
-
         }
+
+
+
     }
 }

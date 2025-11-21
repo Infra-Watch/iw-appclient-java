@@ -12,10 +12,13 @@ public class ConexaoBanco {
 
     public ConexaoBanco() {
         BasicDataSource basicDataSource = new BasicDataSource();
-        basicDataSource.setUrl("jdbc:mysql://3.85.148.68:3306/infrawatch?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC-3");
-        basicDataSource.setUsername("captura_java");
-        basicDataSource.setPassword("jarInfrawatch1234");
-        basicDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+//        basicDataSource.setUrl("jdbc:mysql://3.85.148.68:3306/infrawatch?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC-3");
+        basicDataSource.setUrl("jdbc:mysql://localhost:3306/infrawatch");
+//        basicDataSource.setUsername("captura_java");
+        basicDataSource.setUsername("root");
+//        basicDataSource.setPassword("jarInfrawatch1234");
+        basicDataSource.setPassword("03251005");
+//        basicDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
         this.basicDataSource = basicDataSource;
         this.jdbcTemplate = new JdbcTemplate(basicDataSource);

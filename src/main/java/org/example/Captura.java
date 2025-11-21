@@ -137,12 +137,6 @@ public class Captura {
         return taxaEnviados;
     }
 
-//    public static void main(String[] args) {
-//
-//        Looca looca = new Looca();
-//
-//        System.out.println(looca.getRede().getGrupoDeInterfaces().getInterfaces());
-//
-//    }
+
 
 }
